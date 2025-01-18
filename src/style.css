@@ -1,0 +1,235 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  margin: 0;
+  overflow: hidden;
+  background: #000;
+  color: #fff;
+  font-family: sans-serif;
+}
+
+#app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+#scene-container {
+  min-height: 0;
+  flex-grow: 1;
+  position: relative;
+  min-width: 0;
+}
+
+#info {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 8px;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+canvas {
+  display: block;
+}
+
+#input-container {
+  position: absolute;
+  display: flex;
+  gap: 8px;
+  flex-direction: row;
+  bottom: 24px;
+  width: 100%;
+  padding: 12px;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 700;
+  color: #666;
+}
+
+.input-bar {
+  display: flex;
+  gap: 2px;
+  align-items: center;
+}
+
+/* Icon button that opens the date picker */
+.icon {
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.input-style {
+  width: 1.2em;
+  text-align: right;
+  background: #222;
+  color: #fff;
+  padding: 5px 10px;
+  border: 2px solid #555;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+/* For the year input, which is wider */
+.datetime-input-year {
+  width: 3em;
+}
+
+.input-style:focus {
+  outline: none;
+  border-color: #60a5fa;
+  background: #333;
+}
+
+/* Buttons like "Use My Location" and "Now" */
+.button {
+  text-align: right;
+  background: #111;
+  color: #fff;
+  width: 36px;
+  height: 36px;
+  border: 2px solid #333;
+  border-radius: 24px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button:hover {
+  background: #60a5fa;
+  border-color: #666;
+}
+
+.button:active {
+  background: #000;
+  transform: scale(0.95);
+}
+
+/* Tooltip styling */
+#tooltip {
+  padding: 6px 12px;
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  border-radius: 6px;
+  pointer-events: none;
+  display: none;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+#dashboard-container {
+  width: 100%;
+  flex-shrink: 0;
+  background-color: #222;
+  overflow-y: auto;
+  z-index: 1000;
+}
+
+.astro-grid {
+  display: flex;
+  flex-direction: row;
+  padding: 0.5rem;
+  margin: 0;
+}
+
+.astro-card {
+  background-color: #111;
+  border: 2px solid #333;
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-width: 240px;
+  margin: 0.5rem;
+}
+
+.astro-card:hover {
+  border-color: #60a5fa;
+  transform: translateY(-2px);
+}
+
+.astro-card:active {
+  transform: translateY(0);
+}
+
+/* Add focus styles for keyboard navigation */
+.astro-card:focus {
+  outline: none;
+  border-color: #60a5fa;
+  box-shadow: 0 0 0 2px rgba(96, 165, 250, 0.3);
+}
+
+.card-header {
+  padding: 0.8rem;
+}
+
+.card-header h3 {
+  margin: 0;
+  font-size: 0.8rem;
+  color: #fff;
+}
+
+.card-content {
+  padding: 0.75rem;
+}
+
+.card-item {
+  margin-bottom: 0.4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+}
+
+.card-item .label {
+  font-weight: 500;
+  color: #777;
+}
+
+.card-item .value {
+  color: #bbb;
+  text-align: right;
+}
+#dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #111;
+  padding: 1rem;
+  color: #fff;
+  border-bottom: 2px solid #333;
+  font-family: sans-serif;
+}
+
+#dashboard-header h2 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #60a5fa;
+}
+
+#dashboard-header p {
+  margin: 0;
+  font-size: 1rem;
+  color: #bbb;
+}
